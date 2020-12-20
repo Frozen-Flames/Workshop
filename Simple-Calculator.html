@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>            
+      <body style="width:800px ;height: 600px; background-color: #C6E9E9;">
+      <div style="width:800px ;height: 600px; margin-left: 200px;"><br>
+            <h1 style="margin-left: 300px;" >SIMPLE CALCULATOR</h1>
+            <div style = "display:flex;">
+            <input type="number" placeholder="No1" id="fno" style="font-size: 40px;width: 150px; height: 100px; margin-left: 300px;">
+            <input type="number" placeholder="No2" id="sno" style="font-size: 40px;width: 150px; height: 100px; margin-left: 50px">
+            </div> <br><br>
+            <button onclick="sum()" style="width: 140px; height: 140px; margin-left: 300px;background-color: #FFC300; font-size:30px; border-radius: 50%"> Add</button>
+            <button onclick="subt()" style="width: 140px; height: 140px;background-color: #FA6859; margin-left: 10%; font-size:30px; border-radius: 50%">Subtract</button><br><br>
+            <button onclick="mult()" style="width: 140px; height: 140px; margin-left: 300px;background-color: #8BA3F0; font-size:30px; border-radius: 50%">Multiply</button>
+            <button onclick="divide()" style="width: 140px; height: 140px;background-color: #D6F011  ;margin-left: 10%; font-size:30px; border-radius: 50%;"> Divide</button>
+            <h1 id="res" style=" font-size: 50px; margin-left: 40%; color: #FC6300 ; "> RESULT  </h1>
+      </div>
+      </body>
+      <script>
+            function sum(){  
+            var sum = document.getElementById('res');
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+            sum.innerText=Number(fno)+Number(sno);
+            }
+            function mult(){  
+            var mult = document.getElementById('res');
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+            mult.innerText=Number(fno)*Number(sno);
+            }
+            function subt(){  
+            var subt = document.getElementById('res');
+            var fno=document.getElementById('fno').value;
+            var sno=document.getElementById('sno').value;
+            subt.innerText=Number(fno)-Number(sno);
+            }
+            function divide(){
+            var divide=document.getElementById('res');
+            var sno=document.getElementById('sno').value;
+            if(Number(sno)==0)
+            divide.innerText="Division Not Possible";
+            else{
+            var fno=document.getElementById('fno').value;
+            divide.innerText=Number(fno)/Number(sno);
+            }
+            }
+      </script>
+</html>
