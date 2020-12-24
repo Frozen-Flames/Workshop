@@ -1,0 +1,143 @@
+body {
+	margin:0;
+    padding:0;
+	background: #e4b45a;
+}
+
+.bowl{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px; height: 300px;
+	background: rgba(11, 198, 255, 0.205);
+	border-radius: 50%;
+	border: 4px solid #fff;
+	transform-origin: bottom center;
+	animation: animate 7s linear infinite;
+}
+
+.bowl:before{
+	content:'';
+	position: absolute;
+	top: -3px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 40%;
+	height:30px;
+	background: rgba(11, 198, 255, 0.205);
+	border-radius: 50%;
+	border: 4px solid #fff;
+}
+
+.bowl:after{
+	content:'';
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 150px;
+	height:80px;
+	background: rgba(25, 50, 58, 0.05);
+	border-radius: 50%;
+}
+
+.water{
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	width: 300px;
+	height: 150px;
+	background: rgba(16, 165, 214, 0.836);
+	border-bottom-right-radius: 150px;
+	border-bottom-left-radius: 150px;
+	transform-origin: top center;
+	animation: animateWater 7s linear infinite;
+}
+
+.water:before{
+	content:'';
+	position: absolute;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 20px;
+	border-radius: 50%;
+	background: rgba(0, 191, 255, 0.836);
+}
+
+.shadow{
+	position: absolute;
+	top: calc(50% + 150px);
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	height: 30px;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: -1; 
+	border-radius: 50%;
+}
+
+img.fish
+{
+	margin-left: 20px;
+	margin-right: 40px;
+	height:50px; 
+	width:50px;
+	animation: animateFish 5s linear infinite;
+}
+img.fishorange
+{
+	margin-left: 30px;
+	margin-right: 20px;
+	height:50px; 
+	width:50px;
+	animation: animateFishorange 5s linear infinite;
+}
+
+@keyframes animateFish{
+	0%
+	{	transform: translate(0,0) rotateY(180deg);}
+	50%
+	{	transform: translate(180px,0) rotateY(180deg);}
+	51%
+	{	transform: translate(180px,0) rotateY(0deg);}
+	100%
+	{	transform: translate(0,0) rotateY(0);}
+}
+
+@keyframes animateFishorange{
+	0%
+	{	transform: translate(180px,0) rotateY(0deg);}
+	50%
+	{	transform: translate(0,0) rotateY(0deg);}
+	51%
+	{	transform: translate(0,0) rotateY(180deg);}
+	100%
+	{	transform: translate(180px,0) rotateY(180deg);}
+}
+
+@keyframes animate{
+	0%
+	{	transform: translate(-50%,-50%) rotate(0deg);}
+	25%
+	{	transform: translate(-50%,-50%) rotate(10deg);}
+	50%
+	{	transform: translate(-50%,-50%) rotate(0deg);}
+	75%
+	{	transform: translate(-50%,-50%) rotate(-10deg);}
+	100%
+	{	transform: translate(-50%,-50%) rotate(0deg);}	
+}
+@keyframes animateWater{
+	0%
+	{	transform: rotate(0deg);}
+	25%
+	{	transform: rotate(-15deg);}
+	50%
+	{	transform: rotate(0deg);}
+	75%
+	{	transform: rotate(15deg);}
+	100%
+	{	transform: rotate(0deg);}
+}
