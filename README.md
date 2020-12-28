@@ -12,6 +12,8 @@ Task2: Simple-Calculator
 
 Task3: Animation
 
+Task4: JS Tables
+
 
 
 To run the files on your system:
