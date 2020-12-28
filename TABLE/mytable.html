@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+ <html>
+            <head>
+            <link rel = "stylesheet" type = "text/css" href = "table.css">
+            <title>Table</title>
+               
+            </head>
+            <body >
+            <div style="justify-content: center; font-size: 30px; font-family: cursive; display: flex;"> TABLE DATA</div>
+            <br><br><br>
+            
+                    <div >
+                        <table style=" margin-left: 30%;background-image: url('b.jpg'); border: solid coral; width:40%; font-size:25px;" border=3 id="t">
+                            <tr >
+                                <td colspan="4" align="center" id="a"><strong>STUDENT RECORD</strong></td>
+                            </tr>
+                            <tr>
+                                <td><b>NAME</b></td>
+                                <td><b>ROLL NUMBER</b></td>
+                                <td><b>BRANCH</b></td>
+                                <td><b>YEAR</b></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <br><br><br>
+                    <div>
+                        <table style=" margin-left: 30%; background-image: url('b.jpg'); stretch:50%; border: solid coral;  width:40%; font-size:25px;" border=3 id="t2">
+                            <tr>
+                                <td colspan="4" align="center" id="b"><strong>TEACHER RECORD</strong></td>
+                            </tr>
+                            <tr><td><b>NAME</b></td><td><b>SUBJECT</b></td><td><b>POST</b></td></tr>  
+                        </table>
+                    </div>
+                    <br><br><br>
+                    <button onclick="reveal()" style="margin-left: 42%; height: 60px; width: 240px; background-image: url('c.jpg'); font-size:25px;">Display All Content</button>
+            <script>
+                        var counter=0;
+                        function reveal(){   
+                            var dtu={
+                                student:[],
+                                teacher:[]
+                                }
+                            if(counter==0){
+                               
+                                dtu.student.push({'NAME':'DHRUV','rno':'A3','branch':'COE','year':'1st'},
+                                                {'NAME':'AMAN','rno':'Z2','branch':'ABC','year':'3rd'},
+                                                {'NAME':'VISHAL','rno':'B9','branch':'BME','year':'2nd'})   
+                                var t=document.getElementById('t')
+                                for(var i=0;i<dtu.student.length;++i){
+                                    t.innerHTML+='<tr><td>'+dtu.student[i].NAME+'</td>'+'<td>'+dtu.student[i].rno+'</td>'+'<td>'+dtu.student[i].branch+'</td>'+'<td>'+dtu.student[i].year+'</td></tr>'
+                                }
+                                dtu.teacher.push({"tn":'Rashmi','Subject':'FEC 24','post':'Assistan Prof'},
+                                                {"tn":'Vikram','Subject':'English','post':'Professor'},
+                                                {"tn":'Sahil','Subject':'Library Management','post':'Librarian'},
+                                                )
+                                var t=document.getElementById('t2')
+                                for(var i=0;i<dtu.teacher.length;++i){
+                                    t.innerHTML+="<tr><td>"+dtu.teacher[i].tn+'</td>'+'<td>'+dtu.teacher[i].Subject+'</td>'+'<td>'+dtu.teacher[i].post+'</td></tr>'
+                                }
+                                counter++;
+                            }
+                        }
+            </script>
+            </body>
+ </html>

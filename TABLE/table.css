@@ -1,0 +1,23 @@
+body{
+    /* background-image: url('t.jpg'); */
+    background: linear-gradient(45deg, #ecdc4d, #56fdc5, #ec7ed5, #ecdc4d,#36c1e4);                      
+    animation-name: gradient;
+    background-size: 400% 400%;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+        opacity:100%;
+    }
+    50%{
+        background-position: 100% 50%;
+        opacity:80%;
+    }
+    100%{
+        background-color: 0% 50%;
+        opacity:100%;
+    }
+}
